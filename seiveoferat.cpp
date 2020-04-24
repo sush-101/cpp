@@ -50,9 +50,9 @@ int p[sz];
 void seive(){
     p[0] = 1;
     p[1] = 1;
-    fr(i,2,i,sz,1){
+    fr(i,2,i*i,sz,1){
         if(p[i] == 0){
-            fr(j,2,i*j,sz,1){
+            fr(j,i,i*j,sz,1){
                 p[i*j] = 1;
             }
         }
